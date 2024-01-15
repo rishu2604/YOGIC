@@ -1,0 +1,120 @@
+$linkedinBlue1: #0072b1;
+$linkedinBlue2: #0073b1;
+$linkedinBlue3: #004c75;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: whitesmoke;
+  // background: url("https://static.vecteezy.com/system/resources/thumbnails/011/565/769/small/artistic-seamless-pattern-with-drawn-swil-lines-abstract-organic-shape-repeatable-texture-loop-line-background-vector.jpg");
+}
+
+
+.login {
+  // height: 100vh;
+  background-color: transparent;
+  .login-inner {
+    // display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // margin-top: ;
+
+    h1{
+      align-items: left;
+      margin-top: 100px;
+      margin-left: 40px;
+      font-size: 70px;
+      margin-bottom: 0px;
+      color: rgb(114, 1, 114);
+    }
+    h2{
+      margin-left: 40px;
+    }
+    h3{
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  }
+
+}
+
+.login-btn {
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  background-color: $linkedinBlue2;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  font-family: system-ui;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.login-btn:hover {
+  background-color: $linkedinBlue3;
+}
+
+
+
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+  &:before {
+    content: "";
+    // use the linear-gradient for the fading effect
+    // use a solid background color for a solid bar
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    // this is really the only tricky part, you need to specify the background color of the container element...
+    color: #818078;
+    background-color: #fcfcfa;
+  }
+}
+
+.google-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .google-btn {
+    width: 300px !important;
+  }
+
+  .go-to-signup {
+    font-size: 18px;
+  }
+
+  .join-now {
+    color: $linkedinBlue1;
+    font-family: system-ui;
+    cursor: pointer;
+    font-size: 18px;
+  }
+}

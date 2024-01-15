@@ -1,13 +1,63 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import LoginComponent from './components/login';
+import RegisterComponent from './components/register';
+import Home from './components/home';
+import FormComponent from './components/form';
+import NavbarComponent from "./components/navbar"
+import HomePage from './Pages/homepage';
+import FormPage from './Pages/formpage';
+
+// import AboutComponent from './components/about'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LoginComponent/>
+  },
+  {
+    path: "/register", 
+    element: <RegisterComponent/>
+  },
+  {
+    path: "/home", 
+    element: <Home/>
+  },
+  {
+    path: "/form", 
+    element: <FormComponent/>
+  },
+  {
+    path: "/navbar",
+    element: <NavbarComponent/>
+  },
+  {
+    path: "/homepage",
+    element: <HomePage/>
+  },
+  {
+    path: "/formpage",
+    element: <FormPage/>
+  },
+
+  // {
+  //   path: "/about",
+  //   element: <AboutComponent/>
+  // }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
